@@ -1,23 +1,36 @@
 <!-- src/views/Home.vue -->
 <template>
-  <div class="container mx-auto p-4">
-    <h1 class="text-4xl font-bold text-center text-blue-500 mb-6">Bienvenue sur notre site web</h1>
+  <div class="container mx-auto p-8 text-center">
+    <!-- Logo -->
+    <img src="../assets/Logo.svg" alt="Logo" class="mx-auto w-24 h-24 mb-6" />
 
-    <!-- Bouton personnalisé -->
-    <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600">
-      Cliquez ici
-    </button>
+    <!-- Titre -->
+    <h2 class="text-3xl font-bold text-Black-500 mb-4">Digital Student</h2>
 
-    <!-- Zone de texte personnalisée -->
-    <input
-      type="text"
-      class="border border-gray-300 rounded w-full p-2 mt-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      placeholder="Entrez votre texte ici"
-    />
+    <!-- Texte -->
+    <p class="text-gray-600 mb-8">
+      Aidez votre étudiant à réussir sa formation en gérant ses besoins au quotidien ! <br />
+      Mais attention, le chemin vers le succès est semé d'embûches... <br />
+      Serez-vous capable de l'amener jusqu'à la victoire ?
+    </p>
 
-    <!-- Autres éléments personnalisés -->
-    <div class="mt-6 p-4 bg-gray-100 rounded shadow">
-      <p class="text-lg">Voici un élément personnalisé avec Tailwind CSS</p>
+    <!-- Boutons -->
+    <div class="flex flex-col items-center space-y-1">
+      <button
+        class="w-48 bg-white-700 hover:bg-green-500 text-green-500 hover:text-white border-2 border-green-500 font-bold py-2 px-4 rounded hover:scale-110 duration-200"
+      >
+        Instructions
+      </button>
+      <button
+        class="w-48 bg-white-700 text-green-500 hover:text-white hover:bg-green-500 border-2 border-green-500 font-bold py-2 px-4 rounded hover:scale-110 duration-200"
+      >
+        Jouer
+      </button>
+      <button
+        class="w-48 bg-white-700 text-green-500 hover:text-white hover:bg-green-500 border-2 border-green-500 font-bold py-2 px-4 rounded hover:scale-110 duration-200"
+      >
+        À propos
+      </button>
     </div>
   </div>
 </template>
