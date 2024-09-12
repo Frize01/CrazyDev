@@ -10,6 +10,10 @@ const props = defineProps({
   form: {
     type: Boolean,
     default: false
+  },
+  large: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -24,14 +28,20 @@ const goBack = () => {
   <router-link
     v-if="to"
     :to="to"
-    class="w-48 bg-white text-green-500 hover:bg-green-500 hover:text-white border-2 border-green-500 font-bold py-2 px-4 rounded duration-200"
+    :class="[
+      'bg-white flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white border-2 border-green-500 font-bold py-2 px-4 rounded duration-200',
+      { 'h-16': props.large }
+    ]"
   >
     <slot></slot>
   </router-link>
   <button
     v-else
     @click="goBack"
-    class="w-48 bg-white text-green-500 hover:bg-green-500 hover:text-white border-2 border-green-500 font-bold py-2 px-4 rounded duration-200"
+    :class="[
+      'bg-white flex items-center justify-center align-middle text-green-500 hover:bg-green-500 hover:text-white border-2 border-green-500 font-bold py-2 px-4 rounded duration-200',
+      { 'h-16': props.large }
+    ]"
   >
     <slot></slot>
   </button>

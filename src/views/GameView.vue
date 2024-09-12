@@ -26,9 +26,9 @@
 
     <div class="flex flex-row items-center space-x-1">
       <!-- TODO Changer la taille -->
-      <ButtonComponents>Manger</ButtonComponents>
-      <ButtonComponents>Étudier</ButtonComponents>
-      <ButtonComponents>Dormir</ButtonComponents>
+      <ButtonComponents large class="w-full">Manger</ButtonComponents>
+      <ButtonComponents large class="w-full">Étudier</ButtonComponents>
+      <ButtonComponents large class="w-full">Dormir</ButtonComponents>
     </div>
 
     <ButtonComponents class="w-full mt-2">Passage de l'examen</ButtonComponents>
