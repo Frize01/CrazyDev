@@ -14,7 +14,7 @@
     </div>
 
     <!-- Avatar -->
-    <img :src="GenerationURL('/logo.svg')" alt="Avatar" class="mx-auto w-24 h-24 mb-6" />
+    <img :src="GenerationURL('/avatar.svg')" alt="Avatar" class="mx-auto w-24 h-24 mb-6" />
 
     <!-- Stats -->
     <div class="flex flex-col space-y-4">
