@@ -4,7 +4,7 @@ import { GenerationURL } from '@/composables/ImagesGenTools'
 </script>
 
 <template>
-  <main class="container flex flex-col h-full justify-between mx-auto px-8 py-16 text-center">
+  <main class="container flex flex-col min-h-full justify-between mx-auto px-8 py-16 text-center">
     <div>
       <img :src="GenerationURL('/logo.svg')" alt="Logo" class="mx-auto w-24 h-24 mb-6" />
       <h2 class="text-3xl font-bold text-Black-500 mb-4">Digital Student</h2>

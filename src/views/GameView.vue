@@ -6,7 +6,7 @@
     <!-- Stats (niveau + golds) -->
     <div class="flex flex-row justify-center space-x-8">
       <div class="flex flex-col items-center">
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2 mb-4">
           <p class="text-xl">{{ player.argent }} Gold</p>
           <img :src="GenerationURL('/coin.svg')" alt="Logo Golds" class="w-6 h-6" />
         </div>
@@ -27,13 +27,13 @@
     <!-- Boutons d'actions -->
     <div class="flex flex-row items-center space-x-1 mt-4">
       <ButtonComponents large class="w-full" @click="player.manger"
-        >Manger (5 Golds)</ButtonComponents
+        >Manger (5 Golds)</ButtonComponents
       >
       <ButtonComponents large class="w-full" @click="player.etudier"
-        >Étudier (10 Golds)</ButtonComponents
+        >Étudier (10 Golds)</ButtonComponents
       >
       <ButtonComponents large class="w-full" @click="player.dormir"
-        >Dormir (2 Golds)</ButtonComponents
+        >Dormir (2 Golds)</ButtonComponents
       >
     </div>
 

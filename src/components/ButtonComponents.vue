@@ -42,7 +42,7 @@ const goBack = () => {
         ? 'bg-green-500 text-white hover:bg-white hover:text-green-500 border-green-500'
         : 'bg-white text-green-500 hover:bg-green-500 hover:text-white border-green-500',
       'flex items-center justify-center border-2 font-bold py-2 px-4 rounded duration-200',
-      { 'h-16': large }
+      { 'min-h-16': large }
     ]"
   >
     <slot></slot>
@@ -55,7 +55,7 @@ const goBack = () => {
         ? 'bg-green-500 text-white hover:bg-white hover:text-green-500 border-green-500'
         : 'bg-white text-green-500 hover:bg-green-500 hover:text-white border-green-500',
       'flex items-center justify-center border-2 font-bold py-2 px-4 rounded duration-200',
-      { 'h-16': large }
+      { 'min-h-16': large }
     ]"
   >
     <slot></slot>
@@ -67,7 +67,7 @@ const goBack = () => {
         ? 'bg-green-500 text-white hover:bg-white hover:text-green-500 border-green-500'
         : 'bg-white text-green-500 hover:bg-green-500 hover:text-white border-green-500',
       'flex items-center justify-center border-2 font-bold py-2 px-4 rounded duration-200',
-      { 'h-16': large }
+      { 'min-h-16': large }
     ]"
   >
     <slot></slot>
