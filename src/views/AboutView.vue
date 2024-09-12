@@ -25,7 +25,7 @@
       </div>
 
       <div class="self-end">
-        <ButtonComponents> Retour </ButtonComponents>
+        <ButtonComponents return> Retour </ButtonComponents>
       </div>
     </div>
   </div>
