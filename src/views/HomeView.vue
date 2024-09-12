@@ -1,12 +1,12 @@
 <script setup>
 import ButtonComponents from '@/components/ButtonComponents.vue'
-import Logo from '@/assets/logo.svg'
+import { GenerationURL } from '@/composables/ImagesGenTools'
 </script>
 
 <template>
   <main class="container flex flex-col h-full justify-between mx-auto px-8 py-16 text-center">
     <div>
-      <img :src="Logo" alt="Logo" class="mx-auto w-24 h-24 mb-6" />
+      <img :src="GenerationURL('/logo.svg')" alt="Logo" class="mx-auto w-24 h-24 mb-6" />
       <h2 class="text-3xl font-bold text-Black-500 mb-4">Digital Student</h2>
 
       <div class="text-gray-600 mb-8">
