@@ -1,4 +1,4 @@
-<!-- src/views/Home.vue -->
+<!-- src/views/HomeView.vue -->
 <template>
   <div class="container mx-auto p-8 text-center">
     <!-- Logo -->
@@ -8,11 +8,13 @@
     <h2 class="text-3xl font-bold text-Black-500 mb-4">Digital Student</h2>
 
     <!-- Texte -->
-    <p class="text-gray-600 mb-8">
-      Aidez votre étudiant à réussir sa formation en gérant ses besoins au quotidien ! <br />
-      Mais attention, le chemin vers le succès est semé d'embûches... <br />
-      Serez-vous capable de l'amener jusqu'à la victoire ?
-    </p>
+    <div class="text-gray-600 mb-8">
+      <p class="mb-2">
+        Aidez votre étudiant à réussir sa formation en gérant ses besoins au quotidien ! Mais
+        attention, le chemin vers le succès est semé d'embûches... Serez-vous capable de l'amener
+        jusqu'à la victoire ?
+      </p>
+    </div>
 
     <!-- Boutons -->
     <div class="flex flex-col items-center space-y-1">
