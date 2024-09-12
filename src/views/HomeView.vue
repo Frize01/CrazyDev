@@ -18,7 +18,7 @@ import { GenerationURL } from '@/composables/ImagesGenTools'
       </div>
     </div>
     <div class="flex flex-col items-center space-y-1">
-      <ButtonComponents :to="{ name: 'instruction' }">Instructions</ButtonComponents>
+      <ButtonComponents :to="{ name: 'instructions' }">Instructions</ButtonComponents>
       <ButtonComponents :to="{ name: 'game' }">Jouer</ButtonComponents>
       <ButtonComponents :to="{ name: 'about' }">À propos</ButtonComponents>
     </div>

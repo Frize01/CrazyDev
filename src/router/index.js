@@ -23,8 +23,8 @@ const router = createRouter({
       component: GameView
     },
     {
-      path: '/instruction',
-      name: 'instruction',
+      path: '/instructions',
+      name: 'instructions',
       component: InstuctionsView
     }
   ]
