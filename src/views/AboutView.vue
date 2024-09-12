@@ -25,29 +25,14 @@
       </div>
 
       <div class="self-end">
-        <button
-          class="w-48 bg-white text-green-500 hover:bg-green-500 hover:text-white border-2 border-green-500 font-bold py-2 px-4 rounded hover:scale-110 duration-200"
-        >
-          Retour
-        </button>
+        <ButtonComponents> Retour </ButtonComponents>
       </div>
     </div>
-    <!-- <div class="flex justify-end">
-      <button
-        class="w-24 bg-white-700 hover:bg-green-500 text-green-500 hover:text-white border-2 border-green-500 font-bold py-2 px-4 rounded hover:scale-110 duration-200"
-      >
-        Retour
-      </button>
-    </div> -->
   </div>
 </template>
 
-<script>
-export default {
-  name: 'AboutView'
-}
+<script setup>
+import ButtonComponents from '@/components/ButtonComponents.vue'
 </script>
 
-<style scoped>
-/* Ajoutez ici tout style personnalisé pour ce composant */
-</style>
+<style scoped></style>
