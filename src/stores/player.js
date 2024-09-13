@@ -128,9 +128,8 @@ export const usePlayerStore = defineStore('player', {
           this.moral = 0
           console.log('Énergie réduite de 25%, Moral à 0')
         } else {
-          this.moral = 0
-          this.energie = 0
-          console.log("Tu as échoué à l'examen, Moral et Énergie à zéro.")
+          this.moral = Math.max(0, this.moral - 20)
+          console.log("Tu as échoué à l'examen, ton moral a baissé.")
         }
 
         saveStateToLocalStorage(this.$state) // Sauvegarde après examen
