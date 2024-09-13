@@ -1,7 +1,8 @@
 <template>
-  <div class="container mx-auto p-8">
+  <div class="container mx-auto p-3">
     <!-- Titre -->
-    <h2 class="text-3xl font-bold text-Black-500 mb-4 text-center">{{ playerName }}</h2>
+    <!-- <h2 class="text-3xl font-bold text-Black-500 mb-4 text-center">{{ playerName }}</h2> -->
+    <h2 class="text-3xl font-bold text-Black-500 mb-4 text-center">Digital Student</h2>
 
     <!-- Stats (niveau + golds) -->
     <div class="flex flex-row justify-center space-x-8">
@@ -19,9 +20,13 @@
     <!-- Stats -->
     <div class="flex flex-col space-y-4">
       <p>Énergie : {{ player.energie }}%</p>
+      <RangeInput :width="player.energie"></RangeInput>
       <p>Moral : {{ player.moral }}%</p>
+      <RangeInput :width="player.moral"></RangeInput>
       <p>Satiété : {{ player.faim }}%</p>
+      <RangeInput :width="player.faim"></RangeInput>
       <p>Connaissances : {{ player.connaissances }}%</p>
+      <RangeInput :width="player.connaissances"></RangeInput>
     </div>
 
     <!-- Boutons d'actions -->
@@ -43,7 +48,12 @@
 
     <!-- Game Over Alert -->
     <div v-if="player.gameOver" class="mt-4 text-red-600 font-bold text-center">
-      <p>Game Over! Vous avez perdu.</p>
+      <p v-on:click="player.reset()">Game Over! Vous avez perdu.</p>
+    </div>
+
+    <!-- Game Over Alert -->
+    <div v-if="player.gameWin" class="mt-4 text-green-600 font-bold text-center">
+      <p v-on:click="player.reset()">Game Over! Vous avez gagné.</p>
     </div>
   </div>
 </template>
@@ -53,17 +63,18 @@ import { onMounted, onUnmounted } from 'vue'
 import ButtonComponents from '@/components/ButtonComponents.vue'
 import { usePlayerStore } from '@/stores/player'
 import { GenerationURL } from '@/composables/ImagesGenTools'
+import RangeInput from '@/components/inputs/RangeInput.vue'
 
 const player = usePlayerStore()
-const playerName = 'Albert'
-
 let intervalId = null
 
 onMounted(() => {
   intervalId = setInterval(() => {
-    player.updateStats()
-    player.gainGolds()
-  }, 15000) // 15 000 ms = 15 secondes
+    if (!player.gameWin) {
+      player.updateStats()
+      player.gainGolds()
+    }
+  }, 1000) // 1 000 ms = 1 seconde
 })
 
 onUnmounted(() => {

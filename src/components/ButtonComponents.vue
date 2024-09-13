@@ -21,7 +21,7 @@ const props = defineProps({
   },
   type: {
     type: String,
-    default: 'primary', // Le type par défaut est maintenant 'primary'
+    default: 'primary',
     validator: (value) => ['primary', 'secondary'].includes(value)
   }
 })
