@@ -53,7 +53,7 @@
 
     <!-- Game Over Alert -->
     <div v-if="player.gameWin" class="mt-4 text-green-600 font-bold text-center">
-      <p v-on:click="player.reset()">Game Over! Vous avez gagné.</p>
+      <p v-on:click="player.reset()">Vous avez gagné !</p>
     </div>
   </div>
 </template>
@@ -70,7 +70,7 @@ let intervalId = null
 
 onMounted(() => {
   intervalId = setInterval(() => {
-    if (!player.gameWin) {
+    if (!player.gameWin && !player.gameOver) {
       player.updateStats()
       player.gainGolds()
     }
